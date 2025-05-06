@@ -42,7 +42,9 @@ This project was carried out as part of the **IDS Industrial Data Science** stud
 - **Advantages**: Very fast, real-time, highly accurate.
 - **Use Case**: Used for detecting the robot and other warehouse objects.
 
-
+<p align="center">
+  <img src="gif_files/yolo_demo.gif" alt="Camera Detection">
+</p>
 
 ### Haar Cascade Classifier
 
@@ -52,7 +54,7 @@ This project was carried out as part of the **IDS Industrial Data Science** stud
 - **Use Case**: Used as an alternative to YOLO where low detection time is essential.
 
 <p align="center">
-  <img src="gif_files/map_loc.gif" alt="Camera Detection">
+  <img src="gif_files/haar_demo.gif" alt="Camera Detection">
 </p>
 
 ## Results
