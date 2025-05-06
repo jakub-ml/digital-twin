@@ -21,7 +21,19 @@ This project was carried out as part of the **IDS Industrial Data Science** stud
 - **YOLO v8** – real-time object detection algorithm with high accuracy and speed.
 - **Haar Cascade Classifier** – machine learning-based object detection method.
 - **Cameras** – two cameras used to collect real-time image data.
+- **Jetson Nano** - mobile robot 
 - **OpenCV** – library for image and video processing.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d79d485d-cb9b-4dac-b0eb-88c179787df3">
+</p>
+
+## Fisheye Effect
+The fisheye effect, common in wide-angle industrial cameras, can be corrected using libraries like OpenCV by calibrating the camera with images of a known pattern, such as a chessboard. This process involves calculating distortion coefficients and the camera matrix, which are then used to undistort the image. Correcting fisheye distortion significantly improves object localization accuracy in vision-based systems like robotics or industrial monitoring.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9a04fb32-1458-46dd-b58f-aaf9bbd24f9c">
+</p>
 
 ## Achieved Goals
 
@@ -42,7 +54,9 @@ This project was carried out as part of the **IDS Industrial Data Science** stud
 - **Advantages**: Very fast, real-time, highly accurate.
 - **Use Case**: Used for detecting the robot and other warehouse objects.
 
-
+<p align="center">
+  <img src="gif_files/yolo_demo.gif" alt="Camera Detection">
+</p>
 
 ### Haar Cascade Classifier
 
@@ -52,7 +66,7 @@ This project was carried out as part of the **IDS Industrial Data Science** stud
 - **Use Case**: Used as an alternative to YOLO where low detection time is essential.
 
 <p align="center">
-  <img src="gif_files/map_loc.gif" alt="Camera Detection">
+  <img src="gif_files/haar_demo.gif" alt="Camera Detection">
 </p>
 
 ## Results
