@@ -23,6 +23,11 @@ This project was carried out as part of the **IDS Industrial Data Science** stud
 - **Cameras** – two cameras used to collect real-time image data.
 - **OpenCV** – library for image and video processing.
 
+## Fisheye Effect
+The fisheye effect, common in wide-angle industrial cameras, can be corrected using libraries like OpenCV by calibrating the camera with images of a known pattern, such as a chessboard. This process involves calculating distortion coefficients and the camera matrix, which are then used to undistort the image. Correcting fisheye distortion significantly improves object localization accuracy in vision-based systems like robotics or industrial monitoring.
+
+![image](https://github.com/user-attachments/assets/9a04fb32-1458-46dd-b58f-aaf9bbd24f9c)
+
 ## Achieved Goals
 
 1. **Robot Detection** – detecting the robot in camera images using YOLO v8 and Haar Cascade Classifier.
