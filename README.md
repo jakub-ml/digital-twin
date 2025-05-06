@@ -1,75 +1,90 @@
-# Lokalizacja Robota w Magazynie z Wykorzystaniem Algorytmów Wizji Komputerowej
+# Robot Localization in a Warehouse Using Computer Vision Algorithms
 
-## Opis projektu
+## Project Description
 
-Projekt polegał na stworzeniu modułu lokalizacji robota w magazynie za pomocą algorytmów wizji komputerowej, wykorzystujących obrazy z dwóch kamer. Celem było określenie pozycji robota z wykorzystaniem metod detekcji obiektów, takich jak YOLO v8 oraz Haar Cascade Classifier, i przekształcenie obrazu w celu określenia lokalizacji robota w przestrzeni magazynowej.
+This project involved developing a robot localization module for warehouse environments using computer vision algorithms and images from two cameras. The goal was to determine the robot's position using object detection methods such as **YOLO v8** and **Haar Cascade Classifier**, and to transform the perspective to localize the robot within the warehouse space.
 
-![Detekcja z kamery](cam1_detection.gif)
+<p align="center">
+  <img src="gif_files/base.gif" alt="Camera Detection">
+</p>
 
+## Project Goal
 
-## Cel projektu
+This project was carried out as part of the **IDS Industrial Data Science** student research group at **AGH University of Science and Technology**. The main objective was to create a system that enables robot localization based on images from two cameras. It was implemented as a component of a **digital twin** of a warehouse.
 
-Projekt został zrealizowany w ramach prac koła naukowego IDS Industrial Data Science na AGH. Głównym celem projektu było opracowanie systemu, który umożliwia lokalizację robota na podstawie obrazu z dwóch kamer. Został on zaimplementowany jako część cyfrowego bliźniaka magazynu.
+<p align="center">
+  <img src="gif_files/detect.gif" alt="Camera Detection">
+</p>
 
-## Wykorzystane technologie
+## Technologies Used
 
-- **Algorytm YOLO v8** - algorytm detekcji obiektów w czasie rzeczywistym, który działa z wysoką dokładnością i szybkością.
-- **Algorytm Haar Cascade Classifier** - metoda wykrywania obiektów oparta na uczeniu maszynowym, która jest używana do detekcji obiektów w obrazie.
-- **Kamery** - dwie kamery używane do zbierania danych w czasie rzeczywistym.
-- **OpenCV** - biblioteka do obróbki obrazu i wideo.
+- **YOLO v8** – real-time object detection algorithm with high accuracy and speed.
+- **Haar Cascade Classifier** – machine learning-based object detection method.
+- **Cameras** – two cameras used to collect real-time image data.
+- **OpenCV** – library for image and video processing.
 
-## Zrealizowane cele
+## Achieved Goals
 
-1. **Detekcja robota** - wykorzystanie algorytmu YOLO v8 oraz Haar Cascade Classifier do wykrywania robota w obrazie z dwóch kamer.
-2. **Lokalizacja robota** - na podstawie detekcji, określenie pozycji robota w przestrzeni magazynowej.
-3. **Przekształcenie perspektywy** - przekształcenie obrazu w celu uzyskania dokładnej lokalizacji robota w trójwymiarowej przestrzeni magazynowej.
+1. **Robot Detection** – detecting the robot in camera images using YOLO v8 and Haar Cascade Classifier.
+2. **Robot Localization** – determining the robot's position in the warehouse space based on detections.
+3. **Perspective Transformation** – image transformation to obtain accurate robot positioning in 3D space.
 
-## Algorytmy detekcji
+<p align="center">
+  <img src="gif_files/map_det.gif" alt="Camera Detection">
+</p>
+
+## Detection Algorithms
 
 ### YOLO v8
 
-- **Dokładność detekcji**: około 95% na zbiorze treningowym.
-- **Średni czas detekcji obiektu**: 0,05 sekundy.
-- **Zalety**: Bardzo szybki, działa w czasie rzeczywistym, wysoka dokładność.
-- **Zastosowanie**: Używany do detekcji robota oraz innych obiektów w przestrzeni magazynowej.
+- **Detection Accuracy**: ~95% on the training dataset.
+- **Average Detection Time**: 0.05 seconds.
+- **Advantages**: Very fast, real-time, highly accurate.
+- **Use Case**: Used for detecting the robot and other warehouse objects.
+
+
 
 ### Haar Cascade Classifier
 
-- **Dokładność detekcji**: około 97% na zbiorze treningowym.
-- **Średni czas detekcji obiektu**: 1,5 sekundy.
-- **Zalety**: Szybsze przetwarzanie obrazu, mniejsza dokładność w porównaniu do YOLO.
-- **Zastosowanie**: Używany jako alternatywa dla YOLO w przypadkach, gdzie czas detekcji jest kluczowy.
+- **Detection Accuracy**: ~97% on the training dataset.
+- **Average Detection Time**: 1.5 seconds.
+- **Advantages**: Faster image processing, lower accuracy than YOLO.
+- **Use Case**: Used as an alternative to YOLO where low detection time is essential.
 
-## Wyniki
+<p align="center">
+  <img src="gif_files/map_loc.gif" alt="Camera Detection">
+</p>
 
-- **Dokładność lokalizacji**: W obu przypadkach (YOLO v8 i Haar Cascade Classifier) lokalizacja robota była możliwa z dużą dokładnością.
-- **Skalowalność**: System jest łatwy do skalowania w zależności od potrzeb, zarówno pod względem liczby kamer, jak i rozmiaru magazynu.
+## Results
 
-## Wnioski
+- **Localization Accuracy**: High accuracy achieved with both YOLO v8 and Haar Cascade Classifier.
+- **Scalability**: The system can be easily scaled to different warehouse sizes and camera setups.
 
-- Algorytm YOLO v8 zapewnia bardzo wysoką dokładność detekcji, ale może wymagać większej mocy obliczeniowej.
-- Haar Cascade Classifier jest szybszy w detekcji, ale oferuje nieco niższą dokładność.
-- W obu przypadkach lokalizacja robota była możliwa w czasie rzeczywistym, a system może być łatwo skalowany.
+## Conclusions
 
-## Zrealizowane cele
+- **YOLO v8** offers excellent detection accuracy but requires more computing power.
+- **Haar Cascade Classifier** is faster but slightly less accurate.
+- Both algorithms enable real-time robot localization and the system is scalable.
 
-- Stworzenie systemu detekcji robota za pomocą kamer.
-- Lokalizacja robota w przestrzeni magazynowej z wykorzystaniem algorytmów wizji komputerowej.
-- Porównanie skuteczności algorytmów YOLO v8 i Haar Cascade Classifier w kontekście detekcji obiektów.
+## Project Summary
 
-## Dokumentacja i źródła
+- Developed a camera-based robot detection system.
+- Localized the robot in warehouse space using computer vision.
+- Compared performance between YOLO v8 and Haar Cascade Classifier.
 
-- [System graficznego rozpoznawania obiektów ruchomych](https://zeszyty-naukowe.wwsi.edu.pl/zeszyty/zeszyt21/System_graficznego_rozpoznawania_obiektow_ruchomych.pdf)
-- [Dokumentacja YOLO](https://github.com/ultralytics/ultralytics)
-- [Data augmentation for Haar Cascade based automobile detection](https://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-d8acbfd7-c840-4f7e-8865-dfe11a304613/c/Data_augmentation_for.pdf)
-- [Calibrate fisheye lens using OpenCV](https://medium.com/@kennethjiang/calibrate-fisheye-lens-using-opencv-333b05afa0b0)
+## Documentation & References
+
+- [Graphical System for Detecting Moving Objects](https://zeszyty-naukowe.wwsi.edu.pl/zeszyty/zeszyt21/System_graficznego_rozpoznawania_obiektow_ruchomych.pdf)
+- [YOLO Documentation](https://github.com/ultralytics/ultralytics)
+- [Data Augmentation for Haar Cascade](https://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-d8acbfd7-c840-4f7e-8865-dfe11a304613/c/Data_augmentation_for.pdf)
+- [Calibrate Fisheye Lens using OpenCV](https://medium.com/@kennethjiang/calibrate-fisheye-lens-using-opencv-333b05afa0b0)
 - [Localization of Detected Objects in Multi-Camera Network](https://www.researchgate.net/publication/224359484_Localization_of_detected_objects_in_multi-camera_network)
 
-## Licencja
+## License
 
-Projekt jest dostępny na licencji MIT.
+This project is licensed under the [MIT License](LICENSE).
 
-## Kontakt
+## Contact
 
-- **Opiekun naukowy**: dr inż. Waldemar Bauer
-- **Zespół**: Jakub Mieszczak, Konrad Golemo, Bartłomiej Gawęda
+- **Supervisor**: Dr. Eng. Waldemar Bauer  
+- **Team**: Jakub Mieszczak, Konrad Golemo, Bartłomiej Gawęda
