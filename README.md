@@ -4,6 +4,9 @@
 
 Projekt polegał na stworzeniu modułu lokalizacji robota w magazynie za pomocą algorytmów wizji komputerowej, wykorzystujących obrazy z dwóch kamer. Celem było określenie pozycji robota z wykorzystaniem metod detekcji obiektów, takich jak YOLO v8 oraz Haar Cascade Classifier, i przekształcenie obrazu w celu określenia lokalizacji robota w przestrzeni magazynowej.
 
+![Detekcja z kamery](cam1_detection.gif)
+
+
 ## Cel projektu
 
 Projekt został zrealizowany w ramach prac koła naukowego IDS Industrial Data Science na AGH. Głównym celem projektu było opracowanie systemu, który umożliwia lokalizację robota na podstawie obrazu z dwóch kamer. Został on zaimplementowany jako część cyfrowego bliźniaka magazynu.
